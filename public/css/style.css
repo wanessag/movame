@@ -11,6 +11,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  position: relative;
   width: 100%;
 }
 
@@ -87,6 +88,7 @@ form {
   padding: 4px;
   border-radius: 30px;
   margin-top: 100px;
+  margin-left: 130px;
 }
 
 p.copyright {
@@ -181,14 +183,14 @@ input, textarea {
 
 .categories a {
   display: block;
-  padding: 13px;
+  padding: 12px;
   color: white;
-  font-size: 17px;
+  font-size: 16px;
   text-decoration: none;
   background-color: #222222;
   font-family: 'Amatic SC', cursive;
   text-align: center;
-  margin: 5px;
+  margin: 2px;
 }
 
 .categories a:hover{
@@ -271,6 +273,7 @@ h5{
 }
 
 .footer {
+  background-color: #222222;
   position: fixed;
   font-size: 18px;
   left: 0;
@@ -278,4 +281,7 @@ h5{
   width: 100%;
   color: #FFFFFF;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  padding: 5px;
 }
