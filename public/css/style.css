@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans|Montserrat);
 
 *{
   margin: 0px;
@@ -10,11 +10,12 @@ body{
   background-image: url("/public/images/ticket.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
 }
 
 .menu{
   background-color: #222222;
-  font-family: 'Montserrat', sans-serif;
   text-align: right;
   padding: 30px;
   color: #FFFFFF;
@@ -23,9 +24,9 @@ body{
   justify-content: space-around;
   font-size: 30px;
   font-family: 'Amatic SC', cursive;
-  }
+}
 
-.menu a{
+.menu .nav-item{
   margin: 10px;
   color: #FFFFFF;
   font-size: 30px;
@@ -33,7 +34,16 @@ body{
   text-decoration: none;
   }
 
-.menu a:hover{
+.logo{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.logo:hover{
+  color: #622036;
+}
+
+.menu .nav-item:hover{
   border: 4px solid #622036;
   border-radius: 10px;
 }
@@ -41,6 +51,13 @@ body{
 .search {
   width: 100%;
   position: relative;
+}
+
+#searchButton{
+  cursor: pointer;
+  margin: 0 30px;
+  background-color: transparent;
+  border: 0;
 }
 
 nav{
@@ -64,9 +81,12 @@ font-size: 25px;
 form {
   background-color: #ccc;
   border: 2px solid #ccc;
+  color: #622036;
+  font-family: 'Montserrat', sans-serif;
   display: inline-block;
   padding: 4px;
   border-radius: 30px;
+  margin-top: 100px;
 }
 
 p.copyright {
@@ -132,13 +152,18 @@ p.copyright {
   font-size: 30px;
 }
 
-input {
+input, textarea {
   background-color: transparent;
   border: 0px;
-  padding: 20px;
+  margin: 20px;
   outline: none;
-  width: 400px;
+  width: 300px;
   color: #414040;
+}
+
+.field input, .field textarea{
+  padding: 10px 0;
+  border-bottom: 1px solid #949494;
 }
 
 .form{
@@ -161,7 +186,7 @@ input {
   font-size: 17px;
   text-decoration: none;
   background-color: #222222;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Amatic SC', cursive;
   text-align: center;
   margin: 5px;
 }
@@ -178,11 +203,79 @@ h5{
   font-size: 20px;
 }
 
-.about{
-  background-color: #622036;
-  width: 800px;
-  height: 550px;
-  padding-top: 120px;
-  margin-right: 120px;
+#movies{
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #CCCCCC;
+  margin: 50px 250px;
+}
+
+.movie-item{
+  display: flex;
+  width: 20%;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 20px 20px 20px;
+  text-align: center;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.movie-item h3, .movie-item a{
+  margin: 10px 0;
+}
+
+.movie-item a, .btn{
+  text-decoration: none;
+  border-radius: 7px;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #622036;
+}
+
+.movie-item a:hover, .btn:hover{
+  background-color: #333333;
+}
+
+.btn{
+  border: 0;
+  cursor: pointer;
+}
+
+.about{
+  background-color: #CCCCCC;
+  color: #622036;
+  border-radius: 30px;
+  margin-top: 100px;
+  width: 700px;
+  height: 480px;
+  padding: 50px;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#sobre, #contato{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#ajax-contact{
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer {
+  position: fixed;
+  font-size: 18px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #FFFFFF;
+  text-align: center;
 }
